@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+<header class="w600 colorfon">Расчет параметров лесного пожара</header>
+<script src="forEst.js" type="text/javascript"></script>
+
+<table class="center">
+	<tr>
+		<td class="tdvyh">
+			ВХОДНЫЕ ПАРАМЕТРЫ
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			Класс пожароопасности:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<select id="KlassPO" class="button w200">
+				<option>I</option>
+				<option>II</option>
+				<option>III</option>
+				<option>IV</option> 
+				<option>V</option> 
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			Укажите тип лесного пожара:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<select id="TypeForestFire" class="button w200">
+				<option>низовой</option>
+				<option>верховой</option> 
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			Укажите тип леса:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<select id="TypeForest" class="button w200">
+				<option>Хвойный</option>
+				<option>Лиственный</option> 
+			</select>
+		</td>
+	</tr>	
+	<tr>
+		<td class="tdvyh">
+			Введите скорость ветра, м/с:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<input type="number" size="5" min="1" max="8" value="1" id="Vv" class="button w200">
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			Введите период расчета, ч:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<input type="number" size="5" min="1" max="96" value="8" id="TimeR" class="button w200">
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			Введите начальный периметр, м:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<input type="number" size="5" min="0" max="10000" value="1" id="PerN" class="button w200">
+		</td>
+	</tr>	
+
+</table>
+<div class="layer1 w600 tblvyh ">
+	<button class="button buttonR" onclick="getResult()">Выполнить расчет</button>
+</div>	
+<table class="tblvyh w600 layer1 colorfon">
+	<tr>
+		<td id="TitleResult">
+			Укажите параметры прогнозировани и нажмитие кнопку 'Выполнить расчет' для получения результата. 
+		</td>
+	</tr>	
+	<tr>
+		<td id="Result">
+
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<div id="ForestFrontSpeed"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="ForestFlangSpeed"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="ForestTylSpeed"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="ForestPer"></div>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<div id="ForestS"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="Sopora"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="PeoplesOp"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="Otzhig"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="PeoplesOt"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="Voda"></div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>
