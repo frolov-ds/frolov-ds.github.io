@@ -2,99 +2,74 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8" />
-<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Расчеты</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" type="text/css">
-
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="layout.js" type="text/javascript"></script>
 </head>
 <body>
-<header class="w600 colorfon">Расчет параметров лесного пожара</header>
-<script src="forEst.js" type="text/javascript"></script>
+<div class="HTMLBLock">
+<header class="colorfon">Расчет параметров лесного пожара</header>
 
-<table class="center">
-	<tr>
-		<td class="tdvyh">
-			ВХОДНЫЕ ПАРАМЕТРЫ
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			Класс пожароопасности:
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			<select id="KlassPO" class="button w200">
+<div class="form">
+<h3>ВХОДНЫЕ ПАРАМЕТРЫ</h2>
+	<div class="form-row">
+		<label for="param1">Класс пожароопасности:</label>
+		<div class="form-row_input">
+			<select id="KlassPO" class="button">
 				<option>I</option>
 				<option>II</option>
 				<option>III</option>
 				<option>IV</option> 
 				<option>V</option> 
 			</select>
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			Укажите тип лесного пожара:
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			<select id="TypeForestFire" class="button w200">
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="TypeForestFire">Укажите тип лесного пожара:</label>
+		<div class="form-row_input">
+			<select id="TypeForestFire" class="button">
 				<option>низовой</option>
 				<option>верховой</option> 
 			</select>
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			Укажите тип леса:
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			<select id="TypeForest" class="button w200">
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="TypeForest">Укажите тип леса:</label>
+		<div class="form-row_input">
+			<select id="TypeForest" class="button">
 				<option>Хвойный</option>
 				<option>Лиственный</option> 
 			</select>
-		</td>
-	</tr>	
-	<tr>
-		<td class="tdvyh">
-			Введите скорость ветра, м/с:
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			<input type="number" size="5" min="1" max="8" value="1" id="Vv" class="button w200">
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			Введите период расчета, ч:
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			<input type="number" size="5" min="1" max="96" value="8" id="TimeR" class="button w200">
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			Введите начальный периметр, м:
-		</td>
-	</tr>
-	<tr>
-		<td class="tdvyh">
-			<input type="number" size="5" min="0" max="10000" value="1" id="PerN" class="button w200">
-		</td>
-	</tr>	
-
-</table>
-<div class="layer1 w600 tblvyh ">
-	<button class="button buttonR" onclick="getResult()">Выполнить расчет</button>
-</div>	
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="Vv">Введите скорость ветра, м/с:</label>
+		<div class="form-row_input">
+			<input type="number" size="5" min="1" max="8" value="1" id="Vv" class="button">
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="Vv">Введите период расчета, ч:</label>
+		<div class="form-row_input">
+			<input type="number" size="5" min="1" max="96" value="1" id="TimeR" class="button">
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="Vv">Введите начальный периметр, м:</label>
+		<div class="form-row_input">
+			<input type="number" size="5" min="1" max="10000" value="1" id="PerN" class="button">
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="Vv">&nbsp;</label>
+		<div class="form-row_input">
+			<button class="button buttonR" onclick="getResult()">Выполнить расчет</button>
+		</div>
+	</div>
+</div>
 <table class="tblvyh w600 layer1 colorfon">
 	<tr>
 		<td id="TitleResult">
@@ -157,6 +132,5 @@
 		</td>
 	</tr>
 </table>
-
 </body>
 </html>
