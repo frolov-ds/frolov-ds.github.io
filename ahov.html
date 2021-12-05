@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+<header class="l200 w600 colorfon">Прогнозирование СДЯВ при авариях на химически опасных объектах</header>
+
+
+ <script src="ahOv.js" type="text/javascript"></script>
+<table class="center">
+	<tr>
+		<td class="tdvyh">
+			ВХОДНЫЕ ПАРАМЕТРЫ
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			Химическое вещество:
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="tdvyh">
+			<select id="TypeV" class="button w200">
+				<option>аммиак</option>
+				<option>хлор</option> 
+			</select>
+		</td>
+
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			Количество вещества, выброшенного в атмосферу, т:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<input type="number" size="5" min="0" max="10000" value="1" id="Q" class="button w200">
+		</td>
+	</tr>
+		
+		<tr>
+		<td class="tdvyh">
+			Степень вертикальной устойчивости атмосферы:
+		</td>
+	</tr>
+	
+	<tr>
+		<td class="tdvyh">
+			<select id="TypeA" class="button w200">
+				<option>инверсия</option>
+				<option>изотермия</option>
+				<option>конвекция</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			Время, прошедшее после начала аварии, ч:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<input type="number" size="5" min="0" max="10000" value="1" id="Time" class="button w200">
+		</td>
+	</tr>
+		<tr>
+		<td class="tdvyh">
+			Температура воздуха, °C:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<input type="number" size="5" min="-30" max="10000" value="1" id="Temp" class="button w200">
+		</td>
+	</tr>
+		
+	<tr>
+		<td class="tdvyh">
+			Скорость ветра, м/с:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<input type="number" size="5" min="1" max="15" value="1" id="Vv" class="button w200">
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			Высота обваловки местности, м:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<input type="number" size="5" min="0" max="10000" value="1" id="H" class="button w200">
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			Расстояние до ближайшего населенного пункта, км:
+		</td>
+	</tr>
+	<tr>
+		<td class="tdvyh">
+			<input type="number" size="5" min="0" max="10000" value="1" id="NP" class="button w200">
+		</td>
+	</tr>
+</table>
+
+<div class="layer1 w600 tblvyh ">
+	<button class="button buttonR" onclick="getResult()">Выполнить расчет</button>
+</div>
+<div class="layer1 w600 tblvyh ">
+	<button class="button buttonR" onclick="downloadText1()">Сохранить входные данные в текстовый файл</button>
+</div>
+<div class="layer1 w600 tblvyh ">
+	<button class="button buttonR" onclick="downloadText()">Сохранить выходные данные в текстовый файл</button>
+</div>
+<table class="tblvyh w600 layer1 colorfon" id="copytext">
+	<tr>
+		<td id="TitleResult">
+			Укажите параметры прогнозировани и нажмитие кнопку 'Выполнить расчет' для получения результата. 
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="Result"></div>
+		</td>
+
+	</tr>
+	<tr>
+		<td id="resultg1">
+
+		</td>
+	</tr>
+	<tr>
+		<td id="resultg2">
+
+		</td>
+	</tr>
+	<tr>
+		<td id="resultT">
+
+		</td>
+	</tr>
+	<tr>
+		<td id="resultk6">
+
+		</td>
+	</tr>
+	<tr>
+		<td id="resultQ1">
+
+		</td>
+	</tr>
+	<tr>
+		<td id="resultQ2">
+
+		</td>
+	</tr>
+
+	<tr>
+		<td id="resultGL">
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="HimS"></div>
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<div id="resultNP"></div>
+		</td>
+
+	</tr>
+</table>
+
+</body>
+</html>
